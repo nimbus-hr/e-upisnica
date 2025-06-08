@@ -1,0 +1,160 @@
+/* --- Google Font: Poppins --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* --- Korijenske Varijable za Meki i Moderni Izgled --- */
+:root {
+    --bs-primary: #6c63ff; /* Pastelno ljubičasta */
+    --bs-primary-rgb: 108, 99, 255;
+    --bs-body-bg: #f5f6fa; /* Vrlo svijetla siva, prozračna */
+    --bs-body-color: #575757;
+    --bs-border-color: #e0e0e0;
+    --card-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: 0 6px 30px rgba(0, 0, 0, 0.08);
+    --card-border-radius: 1rem; /* 16px */
+    --bs-border-radius: 0.5rem; /* 8px */
+}
+
+/* --- Globalni Stilovi --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+.view-container {
+    animation: fadeInUp 0.5s ease-out;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--bs-border-color);
+}
+.navbar-brand {
+    font-weight: 700;
+}
+.navbar-brand i {
+    vertical-align: -0.15em;
+    margin-right: 0.5rem;
+}
+
+/* --- Kartice --- */
+.content-card {
+    background-color: #ffffff;
+    padding: 2rem 2.5rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow-hover);
+}
+.card-title-custom {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+/* --- Forme --- */
+.form-floating label {
+    color: #999;
+}
+.form-control, .form-select {
+    background-color: #fdfdff;
+    border-color: #e6e6f0;
+    border-radius: var(--bs-border-radius);
+    transition: all 0.2s ease-in-out;
+}
+.form-control:focus, .form-select:focus {
+    background-color: #ffffff;
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.1);
+}
+
+/* --- Gumbi --- */
+.btn {
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--bs-border-radius);
+    border: none;
+    transition: all 0.2s ease-out;
+}
+.btn-primary {
+    color: #fff;
+    background-color: var(--bs-primary);
+}
+.btn-primary:hover {
+    background-color: #5a52e6;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(var(--bs-primary-rgb), 0.2), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Tablica --- */
+.table-wrapper {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-shadow);
+}
+.table {
+    border-collapse: separate;
+    border-spacing: 0 8px; /* Razmak između redova */
+}
+.table thead th {
+    border: none;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+.table tbody tr {
+    cursor: pointer;
+    background-color: #fbfbff;
+    border-radius: var(--bs-border-radius);
+    transition: all 0.2s ease-out;
+}
+.table tbody tr:hover {
+    background-color: #f5f6fa;
+    transform: scale(1.02);
+    box-shadow: var(--card-shadow-hover);
+    z-index: 10;
+    position: relative;
+}
+.table td, .table th {
+    vertical-align: middle;
+    border: none;
+    padding: 1rem;
+}
+.table td:first-child, .table th:first-child {
+    border-top-left-radius: var(--bs-border-radius);
+    border-bottom-left-radius: var(--bs-border-radius);
+}
+.table td:last-child, .table th:last-child {
+    border-top-right-radius: var(--bs-border-radius);
+    border-bottom-right-radius: var(--bs-border-radius);
+}
+
+/* --- Modal --- */
+.modal-content {
+    border-radius: var(--card-border-radius);
+    border: none;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+.detail-label {
+    color: #999;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+.detail-value {
+    font-size: 1.1rem;
+    font-weight: 500;
+}

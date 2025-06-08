@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hr" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Upisnice | Program Obrazovanja</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-pen-fill text-primary"></i>
+                e-Upisnice
+            </a>
+            <div id="logout-container" class="d-none">
+                <span id="user-email-display" class="navbar-text me-3 small"></span>
+                <button id="logout-button" class="btn btn-outline-danger btn-sm"><i class="bi bi-box-arrow-right"></i> Odjava</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4 mb-5">
+        
+        <div id="loading-spinner" class="text-center py-5">
+            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+            <p class="mt-2 text-muted">Učitavanje...</p>
+        </div>
+
+        <div id="login-view" class="view-container d-none"></div>
+        <div id="user-view" class="view-container d-none"></div>
+        <div id="admin-view" class="view-container d-none"></div>
+
+    </main>
+    
+    <div class="modal fade" id="prijavaDetaljiModal" tabindex="-1" aria-labelledby="prijavaDetaljiModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="prijavaDetaljiModalLabel">Detalji Prijave</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" id="modal-body-content"></div>
+          <div class="modal-footer justify-content-start" id="modal-footer-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
